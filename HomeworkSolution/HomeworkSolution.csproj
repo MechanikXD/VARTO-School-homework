@@ -44,8 +44,6 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Homework2Solutions.cs" />
-        <Compile Include="Homework3Solutions.cs" />
-        <Compile Include="Homework4Solutions.cs" />
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>

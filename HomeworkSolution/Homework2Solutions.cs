@@ -1,13 +1,11 @@
 ﻿using System;
+using System.Globalization;
+using System.Linq;
 
 namespace HomeworkSolution {
-    using System.Globalization;
-    using System.Linq;
-
-    // Homework for lecture 2 (01.05)
     public class Homework2Solutions {
         // Function to read specific amount of numbers from console
-        public static double[] ReadNumbersFromConsole(int amountOfNumbers) {
+        private static double[] ReadNumbersFromConsole(int amountOfNumbers) {
             // Read user input, check for null and split by whitespace
             string[] userInput = (Console.ReadLine() ?? string.Empty).Split(' ');
             var numbersArray = new double[amountOfNumbers];
