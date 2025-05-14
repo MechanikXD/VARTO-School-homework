@@ -1,0 +1,9 @@
+D:\Programs\JetBrains Rider 2023.3.2\Projects\HomeworkSolution\HomeworkSolution\bin\Debug\HomeworkSolution.exe
+D:\Programs\JetBrains Rider 2023.3.2\Projects\HomeworkSolution\HomeworkSolution\bin\Debug\HomeworkSolution.pdb
+D:\Programs\JetBrains Rider 2023.3.2\Projects\HomeworkSolution\HomeworkSolution\bin\Debug\System.ValueTuple.dll
+D:\Programs\JetBrains Rider 2023.3.2\Projects\HomeworkSolution\HomeworkSolution\bin\Debug\System.ValueTuple.xml
+D:\Programs\JetBrains Rider 2023.3.2\Projects\HomeworkSolution\HomeworkSolution\obj\Debug\HomeworkSolution.csproj.AssemblyReference.cache
+D:\Programs\JetBrains Rider 2023.3.2\Projects\HomeworkSolution\HomeworkSolution\obj\Debug\HomeworkSolution.csproj.CoreCompileInputs.cache
+D:\Programs\JetBrains Rider 2023.3.2\Projects\HomeworkSolution\HomeworkSolution\obj\Debug\HomeworkSolution.csproj.CopyComplete
+D:\Programs\JetBrains Rider 2023.3.2\Projects\HomeworkSolution\HomeworkSolution\obj\Debug\HomeworkSolution.exe
+D:\Programs\JetBrains Rider 2023.3.2\Projects\HomeworkSolution\HomeworkSolution\obj\Debug\HomeworkSolution.pdb
