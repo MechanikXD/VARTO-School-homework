@@ -1,10 +1,40 @@
-﻿namespace HomeworkSolution {
-    using System;
+﻿using System;
+using System.Globalization;
+// ReSharper disable UnusedMember.Local
 
+namespace HomeworkSolution {
     public class Homework3Solutions {
+        private static double[] ReadNumbersFromConsole(int amountOfNumbers) {
+            // Read user input, check for null and split by whitespace
+            string[] userInput = (Console.ReadLine() ?? string.Empty).Split(' ');
+            var numbersArray = new double[amountOfNumbers];
+            for (var index = 0; index < amountOfNumbers; index++) {
+                try {
+                    numbersArray[index] = double.Parse(userInput[index], 
+                        NumberStyles.Any, CultureInfo.InvariantCulture);
+                }
+                catch (IndexOutOfRangeException) { // replace missing numbers with zeros
+                    numbersArray[index] = 0;
+                }
+                catch (FormatException) { // Ask again for input
+                    Console.Write("One of numbers in incorrect format, try again: ");
+                    while (true) {
+                        if (!double.TryParse(Console.ReadLine(), out var newNumber)) {
+                            continue;
+                        }
+
+                        numbersArray[index] = newNumber;
+                        break;
+                    }
+                }
+            }
+
+            return numbersArray;
+        }
+        
         public static void DefineNumberFromConsole() {
             Console.Write("Enter your number: ");
-            var number = Homework2Solutions.ReadNumbersFromConsole(1)[0];
+            var number = ReadNumbersFromConsole(1)[0];
             if (number == 0) {
                 Console.WriteLine("Number is Zero");
             }
@@ -15,16 +45,10 @@
                 Console.WriteLine("Number is Negative");
             }
         }
-        
-        /*
-         Console.WriteLine((number >= 10 && number <= 20) || (number >= 30 && number <= 40)
-                ? "Number within this magic diapason"
-                : "Number is outside of this magic diapason");
-         */
 
         public static void NumberInRangeFromConsole() {
             Console.Write("Enter your number: ");
-            var number = Homework2Solutions.ReadNumbersFromConsole(1)[0];
+            var number = ReadNumbersFromConsole(1)[0];
             Console.WriteLine(number >= 10 && number <= 20 ? "Number within [10; 20]"
                 : number >= 30 && number <= 40 ? "Number within [30; 40]"
                 : "Number is outside of this magic diapason");
@@ -32,7 +56,7 @@
 
         public static void CompareTwoNumbersFromConsole() {
             Console.Write("Enter two numbers: ");
-            var numbers = Homework2Solutions.ReadNumbersFromConsole(2);
+            var numbers = ReadNumbersFromConsole(2);
             const double precision = 0.0001;
             Console.WriteLine(Math.Abs(numbers[0] - numbers[1]) < precision ? "Numbers are equal" :
                 "Bigger number is " + (numbers[0] > numbers[1] ? numbers[0] : numbers[1]));
@@ -44,7 +68,7 @@
 
         public static void MonthNameFromNumber() {
             Console.Write("Enter number of month: ");
-            var monthNumber = (int)Homework2Solutions.ReadNumbersFromConsole(1)[0];
+            var monthNumber = (int)ReadNumbersFromConsole(1)[0];
             if (Enum.IsDefined(typeof(Months), monthNumber)) {
                 Console.WriteLine((Months)monthNumber);
             }
@@ -58,7 +82,7 @@
         }
         public static void DayOfWeekFromNumber() {
             Console.Write("Enter number of day in a week: ");
-            var dayOfWeek = (int)Homework2Solutions.ReadNumbersFromConsole(1)[0];
+            var dayOfWeek = (int)ReadNumbersFromConsole(1)[0];
             if (Enum.IsDefined(typeof(DaysOfWeek), dayOfWeek)) {
                 Console.WriteLine((DaysOfWeek)dayOfWeek);
             }
