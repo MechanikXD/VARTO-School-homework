@@ -1,9 +1,9 @@
-﻿namespace HomeworkSolution {
-    using System;
-    using System.Linq;
-    using System.Text;
+﻿using System;
+using System.Linq;
+using System.Text;
 
-    public class Homework4Solutions {
+namespace HomeworkSolution {
+    public abstract class Homework4Solutions {
         public static void EvenNumbers() {
             var evenNumbers = new int[50];
             for (var i = 0; i < 50; i++) evenNumbers[i] = i * 2;
@@ -23,7 +23,6 @@
             Console.WriteLine(
                 $"There are {evenNumbers.Length} even numbers in generated array\n" +
                 $"They are: {stringBuilder}");
-            
         }
 
         public static void CountCharsFromConsole() {
@@ -39,7 +38,7 @@
         }
 
         public static void LetterAsAscii() {
-            var letterCount = 26;
+            const int letterCount = 26;
             var letters = new char[letterCount];
             // From ascii to ascii
             for (var i = 0; i < letterCount; i++) letters[i] = (char)('a' + i);
